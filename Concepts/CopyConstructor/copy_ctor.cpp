@@ -31,7 +31,7 @@ CopyCtor::~CopyCtor()
 {
 	std::cout << "Dtor Called\n";
 
-	delete m_pValue;
+	delete [] m_pValue;
 }
 
 // When we pass object
