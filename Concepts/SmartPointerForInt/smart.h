@@ -28,6 +28,7 @@ namespace NamespaceSmartPointerForInt
 			~SmartPointerForInt();
 
 			SmartPointerForInt(const SmartPointerForInt& ob);
+			SmartPointerForInt& operator = (const SmartPointerForInt& ob);
 
 			int* get();
 			int operator * ();

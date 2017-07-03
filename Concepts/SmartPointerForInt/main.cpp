@@ -14,6 +14,10 @@ int main()
 
 		SmartPointerForInt sp4 = new int;
 
+		SmartPointerForInt sp5;
+
+		sp5 = sp4;
+
 		sp.release();	// Count = 0
 	}
 	_getch();

@@ -89,11 +89,16 @@ void SmartPointerForInt::release()
 	oReferenceCount.decrementCount();
 }
 
-/*
-int& SmartPointerForInt::operator = (int* ob)
+SmartPointerForInt& SmartPointerForInt::operator = (const SmartPointerForInt& ob)
 {
+	if (this != &ob)
+	{
+		m_pSmartPointer = ob.m_pSmartPointer;
+		oReferenceCount.setCount(ob.oReferenceCount.getCount() + 1);
+	}
 
+	return *this;
 }
-*/
+
 
 
