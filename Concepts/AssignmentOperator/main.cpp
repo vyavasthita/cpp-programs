@@ -5,7 +5,7 @@ using namespace NamespaceAssignOp;
 
 int main()
 {
-	//Copy Ctor
+	//Assignment Operator
 	AssignOp ob1(5);
 
 	AssignOp ob2(7);
