@@ -11,32 +11,32 @@ class Document;
 Doing it in wrong way. Not all client needs all these three interaces. Hence need to segregate them to indivisual interface.
 */
 
-class IMachine
-{
-	public:
-		virtual void print(vector<Document*> docs) = 0;
-		virtual void scan(vector<Document*> docs) = 0;
-		virtual void fax(vector<Document*> docs) = 0;
-};
-
-class ConcreteMachine : public IMachine
-{
-	public:
-		virtual void print(vector<Document*> docs)
-		{
-
-		}
-
-		virtual void scan(vector<Document*> docs)
-		{
-
-		}
-
-		virtual void fax(vector<Document*> docs)
-		{
-
-		}
-};
+//class IMachine
+//{
+//	public:
+//		virtual void print(vector<Document*> docs) = 0;
+//		virtual void scan(vector<Document*> docs) = 0;
+//		virtual void fax(vector<Document*> docs) = 0;
+//};
+//
+//class ConcreteMachine : public IMachine
+//{
+//	public:
+//		virtual void print(vector<Document*> docs)
+//		{
+//
+//		}
+//
+//		virtual void scan(vector<Document*> docs)
+//		{
+//
+//		}
+//
+//		virtual void fax(vector<Document*> docs)
+//		{
+//
+//		}
+//};
 
 // Doing it in correct way
 
