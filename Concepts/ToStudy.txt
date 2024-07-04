@@ -1,0 +1,18 @@
+- Smart Pointer, Reference Counting
+- Linked List, 
+- Sorting, Searching, Complexity
+- Make File
+- MUU
+- Bit operations
+- Dynamic cast
+- Managed Vs Unmanaged
+- TCHAR
+- Design Patterns
+- Multithreading
+- What is C++ 11
+- Windbg
+- fstream, istream, sstream
+- split in C++
+- Operator Overloading
+- DEBUG_MODE, debuggin using ifdef 
+- STL, MAP, pair

@@ -1,0 +1,16 @@
+<text filename = "sample.xml">
+    <module name = "MUU">
+	<Errors>
+	    <error id = "GI001">Config File Path Not Found</error>
+	    <error id = "GI002">Config File Open Error</error>
+	    <error id = "GI003">Config File Read Error</error>
+	    <error id = "GI004">Config File Read2 Error</error>
+	</Errors>
+	<Warnings>
+	    <error id = "GI005">Warning 1</error>
+	    <error id = "GI006">Warning 2</error>
+	    <error id = "GI007">Warning 3</error>
+	    <error id = "GI008">Warning 4</error>
+	</Warnings>
+    </module>
+</text>

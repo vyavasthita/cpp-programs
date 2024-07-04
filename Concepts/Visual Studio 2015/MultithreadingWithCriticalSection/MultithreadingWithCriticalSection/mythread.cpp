@@ -1,0 +1,64 @@
+#include "mythread.h"
+#include <fstream>
+#include <time.h>
+
+using namespace std;
+
+
+void threadStartRoutine(void* ptr)
+{
+	MyThread* thread = static_cast<MyThread*>(ptr);
+
+	thread->threadStartFunction();
+}
+
+MyThread::MyThread(MyCS* pCS) :
+	m_ptrCS(pCS),
+	m_FilePath("C:\\Raja\\TechnicalStudy\\Source_Code\\CPP_Source_Code\\Visual Studio 2015\\MultithreadingWithCriticalSection\\sample.txt")
+{
+}
+
+MyThread::~MyThread()
+{
+	::CloseHandle(m_hThreadHandle);
+	//::DeleteFile(m_FilePath);
+}
+
+void MyThread::CreateNewThread(const char* name, int count)
+{
+	m_constThreadName = name;
+	m_nThreadCount = count;
+
+	m_hThreadHandle = ::CreateThread(NULL, 0, LPTHREAD_START_ROUTINE(&threadStartRoutine), this, 0, NULL);
+
+	if (m_hThreadHandle == NULL)
+	{
+		cout << "Thread Could not be created.\n";
+	}
+}
+
+void MyThread::threadStartFunction()
+{
+	EnterCriticalSection(&m_ptrCS->m_cs);
+	writeToFile();
+	LeaveCriticalSection(&m_ptrCS->m_cs);
+}
+
+void MyThread::writeToFile()
+{
+	ofstream f;
+	f.open(m_FilePath, std::ios::app);
+
+	if (f.good())
+	{
+		for (int i = 0; i < m_nThreadCount; i++)
+		{
+			f << "Thread " << m_constThreadName << " has written to file.\n";
+		}
+	}
+	else
+	{
+		cout << "File could not be opened\n";
+	}
+	f.close();
+}

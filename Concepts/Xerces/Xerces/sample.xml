@@ -1,0 +1,19 @@
+<text filename = "sample.xml">
+	<module name = "MUU">
+		<Errors>
+			<error id = "GI001">Config File Incorrect Path Error</error>
+			<error id = "GI002">Config File Open Error</error>
+			<error id = "GI003">Config File Read Error</error>
+		</Errors>
+		<Warnings>
+			<error id = "GI004">Blank Line</error>
+			<error id = "GI005">Invalid Char</error>
+			<error id = "GI006">Incorrect No Of Attributes</error>
+		</Warnings>
+		<information>
+			<error id = "GI007">File Open Successfully</error>
+			<error id = "GI008">User Created Successfully</error>
+			<error id = "GI009">User Updated Successfully</error>
+		</information>
+   	</module>
+</text>

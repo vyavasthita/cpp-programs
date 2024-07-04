@@ -1,0 +1,2 @@
+hellomake: first.cpp second.cpp
+     gcc -o hellomake first.cpp second.cpp -I

@@ -1,0 +1,17 @@
+﻿USER_ID,PASSWORD,LAST_NAME_LOCAL,FIRST_NAME_LOCAL,MIDDLE_NAME_LOCAL,LAST_NAME_ALPHA,FIRST_NAME_ALPHA,MIDDLE_NAME_ALPHA,EMAIL,PHONE_NUMBER_1,EXTENSION_NUMBER_1,FAX_NUMBER,EXTENSION_FAX_NUMBER,DEPARTMENT_CODE,DEPARTMENT_NAME_ALPHA,DEPARTMENT_NAME_LOCAL,SECTION_CODE,SECTION_NAME_ALPHA,SECTION_NAME_LOCAL,PURCHASE_BASE_CODE,SUPPLIER_CODE_LOCAL,ADDRESS_BOOK_UNQ_KEY
+NEF06101,Oracle10g,Lee1,Michel1,middle,Lee,Michel,middle,sample@samplemail.com,1-100-1001,2-100-1001,3-100-1001,4-100-1001,3C0,TEST sample dep 3C0,サンプル部 3C0 更新,,,,,,NEF06101
+NEF05104,Yu8VF5r5,Potter4,Henly4,middle,Potter,Henly,middle,sample@samplemail.com,1-100-1001,2-100-1001,3-100-1001,4-100-1001,A01,fd,,,,,,,NEF05104
+NEF05106,9t6grTmt,Potter6,Henly6,middle,Potter,Henly,middle,sample@samplemail.com,1-100-1001,2-100-1001,3-100-1001,4-100-1001,3A0,dfd,,,,,,,NEF05106
+NEF01211,F7vrCVpu,shainA,tyt,ytyt,shainA,firstA,middleA,test001-01@test.com,03-1234-5555,1111,03-1234-6666,2222,3A0,PROTOTYPE/MEASUREMENT ENGINEERING GROUP,試作・計測技術ＧＲ　　　　　,FA1,TEST SECTION FA1,てすと　課　FA1,,,NEF01211
+NEK01192,AxD5LAy2,fgfg,hhy,,NISHIMURA,SHIROU,,04sample@mail.com,03-1009-0004,104,03-9009-0004,90104,D01,TEST DEPARTMENT 01 KAI 06,てすと　部　０１　改　０６,S01,TEST SECTION 01 KAI,てすと　課　０１ 改,,,NEK01192
+NEK01501,94EchbTn,fgfg,yyt,,Enomotokai,Kanamekai,,kaname_enomoto@samplemail.com,01-1234-1231,,,,D11,Department D11,部 D11,S02,Section D11S02,課 D11S02,,,NEK01501
+NEJ01008,tENuL0Wg,gfgfh,rtrt,GID120516_001,ShainLastNameSix_update,ShainFirstNameSix_update,,satoru_sannoni@samplemail.com,1-002-06,,,,340,ATSUGI PLANT,厚木工場　　　　　　　　　　,340,ATSUGI PLANT,厚木工場　　　　　　　　　　,,,NEJ01008
+NEJ01003,RjRSR4BU,hghg,yuy,GID120516_001,ShainLastNameFour,ShainFirstNameFour,,kujaku_sannoyon@samplemail.com,1-001-04,,,,340,ATSUGI PLANT,厚木工場　　　　　　　　　　,340,ATSUGI PLANT,厚木工場　　　　　　　　　　,,,NEJ01003
+NEK01233,vrCE05Jk,tyty,uyu,,Kuriyama,Nijuurou,,,,,,,A01,Department A01,部 A01,S01,Section A01S01,課 A01S01,,,NEK01233
+NEK01232,NW1R0jiw,trt,ryt,,Doumoto,Juukurou,,,,,,,A01,Department A01,部 A01,S01,Section A01S01,課 A01S01,,,NEK01232
+NEFCKJ0121156346789345265341234567,F7vrCVpu,shainA,yty,สำนักงานมาตรฐ,shainA,firstA,middleA,test001-01@test.com,03-1234-5555,1111,03-1234-6666,2222,3A0,PROTOTYPE/MEASUREMENT ENGINEERING GROUP,試作・計測技術ＧＲ　　　　　,FA1,TEST SECTION FA1,てすと　課　FA1,,,NEF01211
+CKJH0789,TYiuu787,bhavana,bs,,bhavana,bs,,Bhava@sample.com,68-798-7,,,,,Department,D11,3A3,,,,,
+CKJH59999,TYiuu788,chandra,panda,,chandra,panda,,verma@samplemail.com,589-36588,,,,,Department,D12,3A3,,,,,
+CKJH50200,TYiuu789,chandra,patil,,chandra,patil,,uma@samplemail.com,8569-25466,,,,,Department,D13,3A5,,,,,
+NEF10016,TYiuu790,som,shekar,,som,shekar,,Somya@sample.com,58-6-36565,,,,,Department,D14,3A2,,,,,
+NEF50017,TYiuu791,chaith,achar,,chaith,achar,,dipen@sample.com,896-25,,,,,Department,D15,3A1,,,,,
