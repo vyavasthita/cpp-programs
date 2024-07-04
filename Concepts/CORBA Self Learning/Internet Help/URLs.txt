@@ -1,0 +1,2 @@
+https://docs.oracle.com/cd/E13203_01/tuxedo/tux90/srv2srv/cplus.htm#1020920
+http://www.ciaranmchale.com/corba-explained-simply/the-corbaloc-and-corbaname-urls.html#sect:corbaloc-and-corbaname-critique

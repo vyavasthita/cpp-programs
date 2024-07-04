@@ -1,0 +1,23 @@
+# hwtype  = intel
+# ostype  = linux
+# objtype = debug | release  
+# orbtype  = mico
+# uarchtype = .i686 | <empty for x86_64>
+
+hwtype  = intel
+ostype  = linux
+objtype = release
+orbtype  = mico
+uarchtype =
+
+objdir = bin/$(hwtype)_$(ostype)_$(orbtype)$(uarchtype)/$(objtype)
+
+IDL_HEADER_SUFFIX = hh
+IDL_SOURCE_SUFFIX = cp
+
+IDL_COMPILE = idl -D_MICOGCC_ --codegen-c++ --c++-suffix=$(IDL_SOURCE_SUFFIX) --hh-suffix=$(IDL_HEADER_SUFFIX) --c++-skel --use-quotes --any --poa
+
+COMP = c++
+OPTI = -Wall -c -g3 -O0
+
+IDL_OBJ_COMPILE = $(COMP) $(OPTI)

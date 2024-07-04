@@ -1,0 +1,48 @@
+Step 1 : Write a C++ file
+Step 2 : Write a python file with classes or funtions as per your choice.
+Step 3 : Write a make file
+
+Now because we will use python inside a cpp code, 
+	We need to tell g++ compiler the path of python header files which we are going to use.
+	e.g. #include <Python.h> # We need to know the path of this python header file.
+	
+	Hence we need to add the header file include path in our make file.
+	
+	# INCLUDES = -I/usr/include/python2.7
+	
+	We also need to tell g++ compiler the path of python library which we are eventually going to call.
+	e.g. PyLong_FromLong # We need to know the path of python library file where this particular function lies.
+	
+	# LIBINCLUDES = -L/usr/lib/i386-linux-gnu/python2.7
+	
+Hence we add following in our make file to let the compiler know the files which we are going to use.
+
+Makefile E.g. 
+
+LIBINCLUDES = -L/usr/lib/i386-linux-gnu -lpython2.7
+INCLUDES = -I/usr/include/python2.7
+INC = $(INCLUDES) $(LIBINCLUDES) 
+
+result: cppsample.o
+	c++ -o result cppsample.o $(LIBINCLUDES)
+cppsample.o: cppsample.cpp
+	c++ -c cppsample.cpp $(INCLUDES) $(LIBINCLUDES)
+.PHONY: clean
+clean:
+	rm *.o *.pyc result
+	
+Note: Check the python version in your operating system. Accordingly add the correct path here.
+
+# Creating the libcipher.a Library
+	To create the library file—which is actually an archive file—we will use ar.
+	We are using the -c (create) option to create the library file, 
+	the -r (add with replace) option to add the files to the library file, 
+	and the -s (index) option to create an index of the files inside the library file.
+
+	We are going to call the library file libcipher.a. 
+	We provide that name on the command line, 
+	together with the names of the object files we are going to add to the library.
+	ar -crs libcppsample.a cppsample.o
+
+# We can use the -t (table) option to see what modules are inside the library file.
+ar -t libcppsample.a

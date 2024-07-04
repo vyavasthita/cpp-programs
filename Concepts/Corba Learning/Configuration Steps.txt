@@ -1,0 +1,42 @@
+Steps for CORBA;-
+
+Prerequisites;-
+	yum install gcc-c++
+	yum install gcc
+	
+1. Download mico from official mico page (e.g. mico-2.3.13.zip)
+	'http://www.mico.org/down.html'
+	
+2. Untar/Unzip it in particular location in your system.
+   Say '/home/local/Downloads/'
+   
+3. Configure mico
+	Go to /home/local/Downloads/mico
+	Run ./configure
+	
+4. Install mico
+	gmake
+	gmake install
+	
+5. Set Mico environment path
+	echo "Setting Mico CORBA environment path"
+	export MICO_HOME='/home/local/Downloads/mico'
+	export PATH=$PATH:$MICO_HOME/bin
+
+6. Compile IDL
+			-> idl <name>.idl
+	or		-> idl -i <name>.idl
+	or for c++ specific target use following;-
+			->	idl --c++-skel mytime.idl
+			
+7. Write your program and compile it		
+
+8. Execute Server
+	./myserver >/tmp/myserver.ref &
+
+9. Execute Client
+    ./myclient `cat /tmp/myserver.ref &`
+	
+10. Kill Server
+	kill myserver
+	kill %1

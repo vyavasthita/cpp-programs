@@ -1,0 +1,76 @@
+Steps for CORBA;-
+
+Prerequisites;-
+	yum install gcc-c++
+	yum install gcc
+	
+1. Copy mico.tgz tar and Untar/Unzip it in particular location in your system
+   Say '/home/local/Downloads/'
+   
+   gtar xvzf mico.tgz 
+   it will give you directory named '/home/local/Downloads/mico'
+   
+2. Configure mico
+	Go to /home/local/Downloads/mico
+	and run
+	./configure --prefix=/home/local/Documents/sect/package/mico_2.3.12 --disable-threads
+	
+3. Install mico
+	Go to /home/local/Downloads/mico
+	and run
+	
+	make
+	make install
+	
+4. Set library search path
+
+	Execute the below commands as super/root user.
+	-----------------------------------------------
+
+	Step 1: Create a new file under /etc/ld.so.conf.d/ directory named <library>.conf
+
+	Step 2: Add the library path in the newly created file.
+
+	Step 3: Run ldconfig command to load the new search path.
+	
+	Example;-
+		echo "/home/local/Documents/sect/package/mico_2.3.12/lib" > /etc/ld.so.conf.d/mico.conf && ldconfig
+	
+	Checking if a given library is in search path
+		`ldconfig -p | grep mico`
+		
+5. Set Mico environment path
+
+	echo "Setting Mico CORBA environment path"
+	MICO_HOME='/home/local/Documents/sect/package/mico_2.3.12'
+	export PATH=$PATH:$MICO_HOME/bin
+
+6. Compile IDL
+	for c++ specific target use following;-
+		idl --c++-skel mytime.idl
+	
+	Other options;-
+			-> idl <name>.idl
+	or		-> idl -i <name>.idl
+	or 
+			
+7. Create Makefile
+	Add mico lib path
+	Add mico include path
+	Add mico libraries
+	Client code needs stub
+	Server code needs both stub and skeleton
+
+8. Write server source code with servant and main function and generate bin for server	
+
+9. Write client source code and generate bin for client
+
+10. Execute Server
+	./server >/tmp/server.ref &
+
+11. Execute Client
+    ./client `cat /tmp/server.ref &`
+	
+10. Kill Server
+	kill myserver
+	kill %1

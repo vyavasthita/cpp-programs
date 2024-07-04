@@ -1,0 +1,11 @@
+struct TimeOfDay
+{
+	short hour;
+	short minute;
+	short second;
+};
+
+interface MyTime
+{
+	TimeOfDay get_gmt();
+};
